@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: #d1d5db;
+  font-size: 15px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+  width: 90%;
+  max-width: 750px;
+  margin: 35px auto;
+}
+
+/* ================= CREATE POST ================= */
+
+.create-card {
+  background: #1f2937;
+  color: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.create-card h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+/* Textarea */
+
+textarea {
+  width: 100%;
+  min-height: 130px;
+  resize: vertical;
+  padding: 15px;
+  border: 1px solid #4b5563;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  background: #f9fafb;
+  color: #111827;
+}
+
+textarea::placeholder {
+  color: #6b7280;
+}
+
+textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+/* Bottom row */
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+/* Post button */
+
+button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background: #6b7280;
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Character limit warning */
+
+.danger {
+  color: #f87171;
+  font-weight: bold;
+}
+
+.error {
+  color: #f87171;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ================= POSTS SECTION ================= */
+
+.posts-section {
+  margin-top: 35px;
+}
+
+.posts-section > h2 {
+  margin-bottom: 18px;
+  color: #111827;
+  font-size: 24px;
+}
+
+/* ================= POST CARD ================= */
+
+.post-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  transition: 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Post header */
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.post-header h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 18px;
+}
+
+.post-header small {
+  color: #6b7280;
+}
+
+/* Post content */
+
+.post-content {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #374151;
+  margin: 20px 0;
+  word-wrap: break-word;
+}
+
+/* Post footer */
+
+.post-footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* ================= EMPTY POSTS ================= */
+
+.empty {
+  background: white;
+  padding: 40px 25px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  color: #6b7280;
+}
+
+.empty p {
+  font-size: 19px;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.empty span {
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  .container {
+    width: 94%;
+    margin: 25px auto;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .create-card {
+    padding: 20px;
+  }
+
+  .bottom-row {
+    gap: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+
+  .post-footer {
+    flex-direction: column;
+    gap: 7px;
+  }
+}
